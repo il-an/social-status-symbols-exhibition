@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-(i!+27%40c$omwlyig*=z&m1^=#q+(u*mv460%=3i-nc49h1ja
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["exhibition-irving.onrender.com"]
+ALLOWED_HOSTS = ["exhibition-irving.onrender.com", "127.0.0.1"]
 
 INTERNAL_IPS = [
     "127.0.0.1",
