@@ -14,6 +14,7 @@ class Category(Model):
 class Item(Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
+    description_eng = models.TextField(blank=True)
     description_author = models.CharField(max_length=150, blank=True)
     time = models.CharField(max_length=100, blank=True)
     owner = models.CharField(max_length=100, blank=True)
