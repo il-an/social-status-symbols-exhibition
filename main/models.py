@@ -1,6 +1,6 @@
 # Create your models here.
-from django.db.models import Model
 from django.db import models
+from django.db.models import Model
 from sorl.thumbnail import ImageField
 
 
@@ -14,6 +14,9 @@ class Category(Model):
 class Item(Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
+    description_author = models.CharField(max_length=150, blank=True)
+    time = models.CharField(max_length=100, blank=True)
+    owner = models.CharField(max_length=100, blank=True)
     picture = ImageField(upload_to="images/")
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
