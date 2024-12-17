@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Ирвинг одобряет!
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center">Выставка "Ирвинг одобряет!"</h1>
+    <p class="lead text-center">Добро пожаловать на нашу выставку, где вы сможете узнать больше о наших уникальных предметах.</p>
+
+    <div class="row">
+        {% for item in items %}
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="{{ item.picture.url }}" class="card-img-top" alt="{{ item.name }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ item.name }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Категория: {{ item.category }}</h6>
+                    <p class="card-text">{{ item.description|truncatewords:20 }}</p> <!-- Ограничение количества слов -->
+                    <p class="card-text"><small>Автор описания: {{ item.description_author }}</small></p>
+                    <a href="{% url 'item_detail' item.id %}" class="btn btn-primary">Узнать больше</a> <!-- Ссылка на детальную страницу -->
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <p class="text-center">Нет доступных предметов.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
