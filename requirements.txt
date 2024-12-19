@@ -7,3 +7,4 @@ whitenoise[brotli]~=6.8.2
 psycopg2-binary
 dj-database-url
 python-dotenv
+tzdata
