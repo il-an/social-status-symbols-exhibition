@@ -148,3 +148,5 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
 TAILWIND_APP_NAME = "theme"
+
+CSRF_TRUSTED_ORIGINS = ["il-an-exhibition-socialstudies-d9bd.twc1.net"]
