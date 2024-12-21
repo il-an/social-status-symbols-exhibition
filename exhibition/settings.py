@@ -151,3 +151,19 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 TAILWIND_APP_NAME = "theme"
 
 CSRF_TRUSTED_ORIGINS = ["https://il-an-exhibition-socialstudies-d9bd.twc1.net"]
+
+STORAGES = {
+    "staticfiles": {
+        "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
+    },
+    "default": {
+        "BACKEND": "storages.backends.s3.S3Storage",
+        "OPTIONS": {
+            "access_key": os.environ.get("SUPABASE_S3_ACCESS_KEY_ID"),
+            "secret_key": os.environ.get("SUPABASE_S3_SECRET_ACCESS_KEY"),
+            "bucket_name": os.environ.get("SUPABASE_S3_BUCKET_NAME"),
+            "region_name": os.environ.get("SUPABASE_S3_REGION_NAME"),
+            "endpoint_url": os.environ.get("SUPABASE_S3_ENDPOINT_URL"),
+        },
+    },
+}
