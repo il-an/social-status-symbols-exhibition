@@ -8,3 +8,5 @@ psycopg2-binary
 dj-database-url
 python-dotenv
 tzdata
+django-storages~=1.14.4
+boto3~=1.35.86
