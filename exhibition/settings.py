@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "django-insecure-(i!+27%40c$omw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DJANGO_DEBUG", "True") == "True"
 
-ALLOWED_HOSTS = ["exhibition-irving.onrender.com", "127.0.0.1", "il-an-exhibition-socialstudies-e06f.twc1.net"]
+ALLOWED_HOSTS = (os.environ.get("DJANGO_ALLOWED_HOSTS", "localhost,127.0.0.1,il-an-exhibition-socialstudies-e06f.twc1.net").split(","))
 
 INTERNAL_IPS = [
     "127.0.0.1",
