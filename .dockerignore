@@ -11,8 +11,10 @@
 **/.dockerignore
 **/.env
 **/.git
+**/.idea
 **/.gitignore
 **/.project
+**/.ruff_cache
 **/.settings
 **/.toolstarget
 **/.vs
