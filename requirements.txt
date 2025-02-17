@@ -4,9 +4,9 @@ pillow~=11.0.0
 gunicorn~=23.0.0
 uvicorn~=0.34.0
 whitenoise[brotli]~=6.8.2
-psycopg2-binary
-dj-database-url
-python-dotenv
-tzdata
-django-storages~=1.14.4
+psycopg2-binary~=2.9.10
+dj-database-url~=2.3.0
+python-dotenv~=1.0.1
+tzdata~=2024.2
+django-storages[s3]~=1.14.4
 boto3~=1.35.86
