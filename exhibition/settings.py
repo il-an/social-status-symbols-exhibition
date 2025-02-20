@@ -156,21 +156,21 @@ STORAGES = {
     "staticfiles": {
         "BACKEND": "storages.backends.s3.S3Storage",
         "OPTIONS": {
-            "access_key": os.environ.get("SUPABASE_S3_ACCESS_KEY_ID"),
-            "secret_key": os.environ.get("SUPABASE_S3_SECRET_ACCESS_KEY"),
-            "bucket_name": os.environ.get("SUPABASE_S3_BUCKET_NAME"),
-            "region_name": os.environ.get("SUPABASE_S3_REGION_NAME"),
-            "endpoint_url": os.environ.get("SUPABASE_S3_ENDPOINT_URL"),
+            "access_key": os.environ.get("S3_ACCESS_KEY_ID"),
+            "secret_key": os.environ.get("S3_SECRET_ACCESS_KEY"),
+            "bucket_name": os.environ.get("S3_BUCKET_NAME"),
+            "region_name": os.environ.get("S3_REGION_NAME"),
+            "endpoint_url": os.environ.get("S3_ENDPOINT_URL"),
         },
     },
     "default": {
         "BACKEND": "storages.backends.s3.S3Storage",
         "OPTIONS": {
-            "access_key": os.environ.get("SUPABASE_S3_ACCESS_KEY_ID"),
-            "secret_key": os.environ.get("SUPABASE_S3_SECRET_ACCESS_KEY"),
-            "bucket_name": os.environ.get("SUPABASE_S3_BUCKET_NAME"),
-            "region_name": os.environ.get("SUPABASE_S3_REGION_NAME"),
-            "endpoint_url": os.environ.get("SUPABASE_S3_ENDPOINT_URL"),
+            "access_key": os.environ.get("S3_ACCESS_KEY_ID"),
+            "secret_key": os.environ.get("S3_SECRET_ACCESS_KEY"),
+            "bucket_name": os.environ.get("S3_BUCKET_NAME"),
+            "region_name": os.environ.get("S3_REGION_NAME"),
+            "endpoint_url": os.environ.get("S3_ENDPOINT_URL"),
         },
     },
 }

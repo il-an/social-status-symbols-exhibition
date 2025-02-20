@@ -6,8 +6,9 @@
 
 # Want to help us make this template better? Share your feedback here: https://forms.gle/ybq9Krt8jtBL3iCk7
 ARG PYTHON_VERSION=3.13
-FROM python:${PYTHON_VERSION}-slim as base
-
+FROM python:${PYTHON_VERSION}-slim AS base
+LABEL maintainer="il-an"
+LABEL "org.opencontainers.image.authors"="il-an,ArtScienceMK"
 # Prevents Python from writing pyc files.
 ENV PYTHONDONTWRITEBYTECODE=1
 
@@ -47,4 +48,4 @@ COPY . .
 EXPOSE 8000
 
 # Run the application.
-CMD gunicorn --bind 0.0.0.0:8000 --workers 3 exhibition.wsgi:application
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "--workers", "3", "exhibition.wsgi:application"]
