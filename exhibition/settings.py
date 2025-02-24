@@ -150,7 +150,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 TAILWIND_APP_NAME = "theme"
 
-CSRF_TRUSTED_ORIGINS = ["https://il-an-exhibition-socialstudies-e06f.twc1.net"]
+CSRF_TRUSTED_ORIGINS = os.environ.get("DJANGO_CSRF_TRUSTED_ORIGINS", "").split(",")
 
 STORAGES = {
     "staticfiles": {
